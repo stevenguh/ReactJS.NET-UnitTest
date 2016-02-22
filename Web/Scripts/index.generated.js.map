@@ -1,0 +1,1 @@
+﻿{"version":3,"file":"index.jsx","sourceRoot":null,"sources":["index.jsx"],"sourcesContent":["ReactDOM.render(\r\n  <SomeComponent />,\r\n  document.getElementById('content')\r\n);"],"names":[],"mappings":";;;;;AAAA,QAAQ,CAAC,MAAM,CACb,oBAAC,aAAa,OAAG,EACjB,QAAQ,CAAC,cAAc,CAAC,SAAS,CAAC,CACnC,CAAC"}
