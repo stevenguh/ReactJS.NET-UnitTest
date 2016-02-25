@@ -112,11 +112,8 @@
   <Target Name="TransformBabel" BeforeTargets="Build">
     <TransformBabel SourceDir="$(MSBuildProjectDirectory)\..\Web\Scripts" />
     <TransformBabel SourceDir="$(ProjectDir)" />
+    <Exec Command="(robocopy &quot;$(ProjectDir)\..\Web\Scripts&quot; &quot;$(ProjectDir)\bin\generated&quot; &quot;*.generated.*&quot; /IS /IT /S /MOV /ndl /njh /njs /nc /ns /np) ^&amp; IF %ERRORLEVEL% LEQ 8 SET ERRORLEVEL=0" />
   </Target>
-  <PropertyGroup>
-    <PostBuildEvent>robocopy "$(ProjectDir)\..\Web\Scripts" "$(ProjectDir)\bin\generated" "*.generated.*" /IS /IT /E /MOVE
-if %errorlevel% leq 4 exit 0 else exit %errorlevel%</PostBuildEvent>
-  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
